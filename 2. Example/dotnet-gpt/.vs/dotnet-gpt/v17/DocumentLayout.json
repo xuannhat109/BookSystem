@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nhatvux\\Downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\",
+  "WorkspaceRootPath": "C:\\repos\\BookSystem\\2. Example\\dotnet-gpt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6129ACA-568E-40AB-A2DF-61A2E28447CB}|dotnet-gpt.api\\dotnet-gpt.api.csproj|c:\\users\\nhatvux\\downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\dotnet-gpt.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{F6129ACA-568E-40AB-A2DF-61A2E28447CB}|dotnet-gpt.api\\dotnet-gpt.api.csproj|c:\\repos\\booksystem\\2. example\\dotnet-gpt\\dotnet-gpt.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F6129ACA-568E-40AB-A2DF-61A2E28447CB}|dotnet-gpt.api\\dotnet-gpt.api.csproj|solutionrelative:dotnet-gpt.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6129ACA-568E-40AB-A2DF-61A2E28447CB}|dotnet-gpt.api\\dotnet-gpt.api.csproj|c:\\users\\nhatvux\\downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\dotnet-gpt.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{F6129ACA-568E-40AB-A2DF-61A2E28447CB}|dotnet-gpt.api\\dotnet-gpt.api.csproj|c:\\repos\\booksystem\\2. example\\dotnet-gpt\\dotnet-gpt.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F6129ACA-568E-40AB-A2DF-61A2E28447CB}|dotnet-gpt.api\\dotnet-gpt.api.csproj|solutionrelative:dotnet-gpt.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6129ACA-568E-40AB-A2DF-61A2E28447CB}|dotnet-gpt.api\\dotnet-gpt.api.csproj|c:\\users\\nhatvux\\downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\dotnet-gpt.api\\controllers\\chatgptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6129ACA-568E-40AB-A2DF-61A2E28447CB}|dotnet-gpt.api\\dotnet-gpt.api.csproj|c:\\repos\\booksystem\\2. example\\dotnet-gpt\\dotnet-gpt.api\\controllers\\chatgptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6129ACA-568E-40AB-A2DF-61A2E28447CB}|dotnet-gpt.api\\dotnet-gpt.api.csproj|solutionrelative:dotnet-gpt.api\\controllers\\chatgptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6129ACA-568E-40AB-A2DF-61A2E28447CB}|dotnet-gpt.api\\dotnet-gpt.api.csproj|c:\\users\\nhatvux\\downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\dotnet-gpt.api\\dotnet-gpt.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "AbsoluteMoniker": "D:0:0:{F6129ACA-568E-40AB-A2DF-61A2E28447CB}|dotnet-gpt.api\\dotnet-gpt.api.csproj|c:\\repos\\booksystem\\2. example\\dotnet-gpt\\dotnet-gpt.api\\dotnet-gpt.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{F6129ACA-568E-40AB-A2DF-61A2E28447CB}|dotnet-gpt.api\\dotnet-gpt.api.csproj|solutionrelative:dotnet-gpt.api\\dotnet-gpt.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     }
   ],
@@ -80,11 +80,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\nhatvux\\Downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\dotnet-gpt.api\\appsettings.json",
+              "DocumentMoniker": "C:\\repos\\BookSystem\\2. Example\\dotnet-gpt\\dotnet-gpt.api\\appsettings.json",
               "RelativeDocumentMoniker": "dotnet-gpt.api\\appsettings.json",
-              "ToolTip": "C:\\Users\\nhatvux\\Downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\dotnet-gpt.api\\appsettings.json",
+              "ToolTip": "C:\\repos\\BookSystem\\2. Example\\dotnet-gpt\\dotnet-gpt.api\\appsettings.json",
               "RelativeToolTip": "dotnet-gpt.api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-10-22T09:07:17.146Z",
               "EditorCaption": ""
@@ -93,9 +93,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "dotnet-gpt.api.http",
-              "DocumentMoniker": "C:\\Users\\nhatvux\\Downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\dotnet-gpt.api\\dotnet-gpt.api.http",
+              "DocumentMoniker": "C:\\repos\\BookSystem\\2. Example\\dotnet-gpt\\dotnet-gpt.api\\dotnet-gpt.api.http",
               "RelativeDocumentMoniker": "dotnet-gpt.api\\dotnet-gpt.api.http",
-              "ToolTip": "C:\\Users\\nhatvux\\Downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\dotnet-gpt.api\\dotnet-gpt.api.http",
+              "ToolTip": "C:\\repos\\BookSystem\\2. Example\\dotnet-gpt\\dotnet-gpt.api\\dotnet-gpt.api.http",
               "RelativeToolTip": "dotnet-gpt.api\\dotnet-gpt.api.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
@@ -105,27 +105,25 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ChatGptController.cs",
-              "DocumentMoniker": "C:\\Users\\nhatvux\\Downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\dotnet-gpt.api\\Controllers\\ChatGptController.cs",
+              "DocumentMoniker": "C:\\repos\\BookSystem\\2. Example\\dotnet-gpt\\dotnet-gpt.api\\Controllers\\ChatGptController.cs",
               "RelativeDocumentMoniker": "dotnet-gpt.api\\Controllers\\ChatGptController.cs",
-              "ToolTip": "C:\\Users\\nhatvux\\Downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\dotnet-gpt.api\\Controllers\\ChatGptController.cs",
+              "ToolTip": "C:\\repos\\BookSystem\\2. Example\\dotnet-gpt\\dotnet-gpt.api\\Controllers\\ChatGptController.cs",
               "RelativeToolTip": "dotnet-gpt.api\\Controllers\\ChatGptController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T08:31:58.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T08:31:58.775Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\nhatvux\\Downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\dotnet-gpt.api\\appsettings.Development.json",
+              "DocumentMoniker": "C:\\repos\\BookSystem\\2. Example\\dotnet-gpt\\dotnet-gpt.api\\appsettings.Development.json",
               "RelativeDocumentMoniker": "dotnet-gpt.api\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\nhatvux\\Downloads\\dotnet-gpt-master\\dotnet-gpt-master\\dotnet-gpt\\dotnet-gpt.api\\appsettings.Development.json",
+              "ToolTip": "C:\\repos\\BookSystem\\2. Example\\dotnet-gpt\\dotnet-gpt.api\\appsettings.Development.json",
               "RelativeToolTip": "dotnet-gpt.api\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-28T07:30:12.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T07:30:12.535Z"
             }
           ]
         }
