@@ -1,0 +1,18 @@
+
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build artifacts
+bin/
+obj/
+
+# User secrets & env
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+.env
