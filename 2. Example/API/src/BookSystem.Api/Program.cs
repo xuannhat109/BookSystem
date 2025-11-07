@@ -1,13 +1,48 @@
 using System.Reflection;
+using System.Text;
 using BookSystem.Application.UseCases;
 using BookSystem.Domain.Ports;
 using BookSystem.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ---------------------
-// Register dependencies
-// ---------------------
+// -------------------------
+// JWT Authentication config
+// -------------------------
+var jwtKey = "SuperSecretKeyForBookSystem123!";
+var key = Encoding.ASCII.GetBytes(jwtKey);
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key)
+    };
+});
+
+// -------------------------
+// Authorization config
+// -------------------------
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+    options.AddPolicy("UserOrAdmin", policy => policy.RequireRole("User", "Admin"));
+});
+
+// -------------------------
+// Dependencies
+// -------------------------
 builder.Services.AddScoped<IBookRepository, InMemoryBookRepository>();
 builder.Services.AddScoped<CreateBookUseCase>();
 builder.Services.AddScoped<GetAllBooksUseCase>();
@@ -15,33 +50,43 @@ builder.Services.AddScoped<GetAllBooksUseCase>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
-// ---------------------
+// -------------------------
 // Swagger configuration
-// ---------------------
+// -------------------------
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
     {
         Version = "v1",
-        Title = "Book System API",
-        Description = "API for managing books (Hexagonal Architecture Example)",
-        Contact = new Microsoft.OpenApi.Models.OpenApiContact
-        {
-            Name = "Book System Team",
-            Email = "support@booksystem.local",
-            Url = new Uri("https://github.com/xuannhat109/BookSystem")
-        },
-        License = new Microsoft.OpenApi.Models.OpenApiLicense
-        {
-            Name = "MIT License",
-            Url = new Uri("https://opensource.org/licenses/MIT")
-        }
+        Title = "Book System API with Auth",
+        Description = "Book API protected by JWT (Hexagonal Architecture Example)"
     });
 
-    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFilename);
-    if (File.Exists(xmlPath))
-        options.IncludeXmlComments(xmlPath);
+    // JWT security in Swagger
+    options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "Please insert JWT token into field",
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "bearer"
+    });
+
+    options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] {}
+        }
+    });
 });
 
 var app = builder.Build();
@@ -68,8 +113,13 @@ else
     });
 }
 
+app.UseSwagger();
+app.UseSwaggerUI();
+
 app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
+
 app.MapControllers();
 
 app.Run();

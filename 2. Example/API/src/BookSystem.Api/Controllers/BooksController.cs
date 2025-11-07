@@ -2,15 +2,14 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using BookSystem.Application.UseCases;
 using BookSystem.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookSystem.Api.Controllers;
 
-/// <summary>
-/// Controller quản lý sách — ví dụ cho Hexagonal Architecture.
-/// </summary>
 [ApiController]
 [Route("api/[controller]")]
+[Authorize(Policy = "UserOrAdmin")]
 public class BooksController : ControllerBase
 {
     private readonly CreateBookUseCase _createBook;
@@ -22,17 +21,11 @@ public class BooksController : ControllerBase
         _getAllBooks = getAllBooks;
     }
 
-    /// <summary>
-    /// Lấy danh sách tất cả sách hiện có.
-    /// </summary>
     [HttpGet]
     public async Task<IEnumerable<Book>> GetAll() => await _getAllBooks.ExecuteAsync();
 
-    /// <summary>
-    /// Thêm sách mới.
-    /// </summary>
-    /// <param name="dto">Thông tin sách</param>
     [HttpPost]
+    [Authorize(Policy = "AdminOnly")]
     public async Task<IActionResult> Create([FromBody] BookDto dto)
     {
         await _createBook.ExecuteAsync(dto.Title, dto.Author);
